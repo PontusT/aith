@@ -4,8 +4,13 @@ import HalfColored from '../cv/designs/half_colored/HalfColored';
 import CvContainer from '../cv/container/CvContainer';
 import SEO from '../components/Seo'
 import { graphql } from 'gatsby';
+const PdfDownloadButton = React.lazy(() =>
+  import('../cv/pdf/PdfDownloadButton')
+)
 
 const CurriculumVitae = ({ pageContext, data}) => {
+
+  const isSSR = typeof window === "undefined"
 
   const StyledContainer = styled.div`
     width: 100%;
@@ -26,9 +31,9 @@ const CurriculumVitae = ({ pageContext, data}) => {
     }
   }
 
-
   return (
     <>
+    
       <SEO
         title={cvData.seo.metaTitle}
         description={cvData.seo.metaDescription}
@@ -37,6 +42,11 @@ const CurriculumVitae = ({ pageContext, data}) => {
       <StyledContainer>
         <CvContainer>
           {cvComponent}
+          {!isSSR && (
+            <React.Suspense fallback={<div />}>
+              <PdfDownloadButton data={cvData} image={image} />
+            </React.Suspense>
+          )}
         </CvContainer>
       </StyledContainer>
     </>

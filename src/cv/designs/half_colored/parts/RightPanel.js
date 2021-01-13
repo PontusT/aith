@@ -3,11 +3,11 @@ import styled from '@emotion/styled'
 import { useTheme } from '@emotion/react'
 import SkillContainer from './skills/SkillContainer';
 import RightPanelSection from './RightPanelSection';
+import Experience from './experience/Experience';
 import Graduate from '../../../../icons/graduate.svg'
 import Officedesk from '../../../../icons/officedesk.svg'
 import Programming from '../../../../icons/programming.svg'
 import CodeScreen from '../../../../icons/codescreen.svg'
-import Experience from './experience/Experience';
 
 const RightPanel = ({data}) => {
 
@@ -46,7 +46,7 @@ const RightPanel = ({data}) => {
       <StyledWorkTitle>{data.workTitle}</StyledWorkTitle>
       
       <RightPanelSection icon={programmingIcon} title="Languages" color={data.darkFontColor} >
-        <SkillContainer skills={data.skills} color={data.accentColor} bgColor={data.darkFontColor} />
+        <SkillContainer skills={data.skills} color={data.accentColor} bgColor={'#C2C3D2'} />
       </RightPanelSection>
 
       <RightPanelSection icon={officedeskIcon} title="Work Experience" color={data.darkFontColor} >

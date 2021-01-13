@@ -11,8 +11,6 @@ import ContactList from './contact/ContactList';
 
 const LeftPanel = ({data, image}) => {
 
-  console.log("data", data)
-
   const theme = useTheme();
 
   const StyledContainer = styled.div`
@@ -38,6 +36,7 @@ const LeftPanel = ({data, image}) => {
 
   return (
     <StyledContainer>
+      
       <StaggerChildrenWrapper>
 
         <StaggerChild>

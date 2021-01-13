@@ -10,7 +10,7 @@ exports.cvData = {
       name: "Pontus Thulin",
       workTitle: "Software Engineer & Fullstack Developer",
       presentation:
-        "Pontus has a master's degree in Computer Science and Engineering (Civilingenjör i Datateknik) from Linköping University and over 5 years in the business. He's a full on fullstack developer whom you will often find coding even in his free time.",
+        "Pontus has a master's degree in Computer Science and Engineering (Civilingenjör i Datateknik) from Linköping University and over 5 years in the business. He's a full on fullstack developer whom you will often find coding even in his free time.",
       image: "IMG_7162.jpg",
       seo: {
         metaTitle: 'Pontus Thulin | Fullstack Developer & Software Engineer',
@@ -260,7 +260,7 @@ exports.cvData = {
             startDate: "2009",
             endDate: "2014",
             dates: "2009/2014",
-            title: "MSc Computer Science and Engineering",
+            title: "MSc Computer Science",
             text:
               "Pontus has a master’s degree in Computer Science and Engineering (Civilingenjör i Datateknik) from Linköpings Univesity. The specialization was within Secure and Stable systems with a master thesis about automated security testing."
           },
@@ -289,7 +289,7 @@ exports.cvData = {
             }
           },
           {
-            title: "NodeJS, Express and MongoDB",
+            title: "NodeJS Express MongoDB",
             location: "Hong Kong University, Coursera",
             text: "An introduction course to the Node, Express and Mongo stack.",
             dates: "2019",
@@ -300,7 +300,7 @@ exports.cvData = {
             }
           },
           {
-            title: "Front-End: React",
+            title: "Frontend React",
             location: "Hong Kong University, Coursera",
             text: "An introduction course to React development.",
             dates: "2019",
@@ -311,7 +311,7 @@ exports.cvData = {
             }
           },
           {
-            title: "Front-End: Bootstrap 4",
+            title: "Frontend Bootstrap",
             location: "Hong Kong University, Coursera",
             text: "An introduction course to bootstrap 4.",
             dates: "2019",
