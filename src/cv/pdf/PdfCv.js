@@ -17,8 +17,7 @@ const PdfCv = ({data, image}) => {
   // Create styles
   const styles = StyleSheet.create({
     page: {
-      flexDirection: 'row',
-      backgroundColor: '#E4E4E4',
+      backgroundColor: '#fdfdfd',
       color: data.darkFontColor,
       paddingTop: 40,
       paddingBottom: 30,
@@ -82,7 +81,6 @@ const PdfCv = ({data, image}) => {
     outerContactSection: {
       flexDirection: 'row',
       justifyContent: 'center',
-      marginBottom: 40,
       marginBottom: 40,
     },
     contactSection: {
@@ -187,13 +185,14 @@ const PdfCv = ({data, image}) => {
           <View style={styles.innerLangageSection}>
             {data.skills.map((skill, index) => {
               return (
-                <View style={{
-                  width: '50%',
-                  paddingBottom: 6,
-                  paddingLeft: index % 2 === 0 ? 0 : 10,
-                  paddingRight: index % 2 !== 0 ? 0 : 10
-                }}
-                >
+                <View 
+                  key={skill.skill}
+                  style={{
+                    width: '50%',
+                    paddingBottom: 6,
+                    paddingLeft: index % 2 === 0 ? 0 : 10,
+                    paddingRight: index % 2 !== 0 ? 0 : 10
+                  }}>
                   <Text style={styles.h6}>
                     {skill.skill}
                   </Text>
@@ -218,13 +217,14 @@ const PdfCv = ({data, image}) => {
           <View style={styles.innerLangageSection}>
             {data.frameworks.map((skill, index) => {
               return (
-                <View style={{
-                  width: '50%',
-                  paddingBottom: 6,
-                  paddingLeft: index % 2 === 0 ? 0 : 10,
-                  paddingRight: index % 2 !== 0 ? 0 : 10
-                }}
-                >
+                <View
+                  key={skill.skill}
+                  style={{ 
+                    width: '50%',
+                    paddingBottom: 6,
+                    paddingLeft: index % 2 === 0 ? 0 : 10,
+                    paddingRight: index % 2 !== 0 ? 0 : 10
+                  }}>
                   <Text style={styles.h6}>
                     {skill.skill}
                   </Text>
@@ -257,7 +257,9 @@ const PdfCv = ({data, image}) => {
         </View>
         {data.work_experience.list.map(experience => {
           return (
-            <View style={styles.listSection}>
+            <View 
+              key={experience.title + experience.location + experience.dates}
+              style={styles.listSection}>
               <View style={styles.listItem}>
                 <View style={styles.titleAndDateWrapper}>
                   <Text style={styles.h3}>
@@ -289,7 +291,9 @@ const PdfCv = ({data, image}) => {
         </View>
         {data.projects.list.map(experience => {
           return (
-            <View style={styles.listSection}>
+            <View
+              key={experience.title + experience.location + experience.dates}
+              style={styles.listSection}>
               <View style={styles.listItem}>
                 <View style={styles.titleAndDateWrapper}>
                   <Text style={styles.h3}>
@@ -321,7 +325,9 @@ const PdfCv = ({data, image}) => {
         </View>
         {data.education.list.map(experience => {
           return (
-            <View style={styles.listSection}>
+            <View 
+              key={experience.title + experience.location + experience.dates}
+              style={styles.listSection}>
               <View style={styles.listItem}>
                 <View style={styles.titleAndDateWrapper}>
                   <Text style={styles.h3}>

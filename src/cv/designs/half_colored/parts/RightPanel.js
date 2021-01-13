@@ -53,6 +53,7 @@ const RightPanel = ({data}) => {
         {data.work_experience.list.map(experience => {
           return (
             <Experience
+              key={experience.title + experience.location + experience.dates}
               title={experience.title}
               dates={experience.dates}
               location={experience.location}
@@ -68,6 +69,7 @@ const RightPanel = ({data}) => {
         {data.projects.list.map(experience => {
           return (
             <Experience
+              key={experience.title + experience.location + experience.dates}
               title={experience.title}
               dates={experience.dates}
               location={experience.location}
@@ -83,6 +85,7 @@ const RightPanel = ({data}) => {
         {data.education.list.map(experience => {
           return (
             <Experience
+              key={experience.title + experience.location + experience.dates}
               title={experience.title}
               dates={experience.dates}
               location={experience.location}

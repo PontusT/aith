@@ -65,7 +65,7 @@ const Experience = ({title, dates, location, text, link, color}) => {
     align-items: center;
   `
 
-  const LinkText = styled.a`
+  const LinkText = styled.div`
     margin-right: 6px;
     font-weight: 300;
   `

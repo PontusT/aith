@@ -29,7 +29,7 @@ const SkillContainer = ({ skills, color, bgColor}) => {
     <SkillGrid>
       {skills.map(skill => {
         return (
-          <div>
+          <div key={skill.skill}>
             <h6>
               {skill.skill}
             </h6>

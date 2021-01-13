@@ -8,8 +8,6 @@ const FullWithText = ({children, padding}) => {
     text-align: justify;
   `
 
-  console.log(children)
-
   return (
     <StyledParagraph>
       {children}
