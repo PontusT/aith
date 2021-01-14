@@ -8,7 +8,7 @@ const PdfDownloadButton = React.lazy(() =>
   import('../cv/pdf/PdfDownloadButton')
 )
 
-const CurriculumVitae = ({ pageContext, data}) => {
+const CurriculumVitae = ({ pageContext, data, location}) => {
 
   const isSSR = typeof window === "undefined"
 
@@ -37,7 +37,7 @@ const CurriculumVitae = ({ pageContext, data}) => {
       <SEO
         title={cvData.seo.metaTitle}
         description={cvData.seo.metaDescription}
-        socialImage={`https://aith.se${image.fluid.src}`}
+        location={location}
       />
       <StyledContainer>
         <CvContainer>

@@ -2,9 +2,9 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ title, description, socialTitle, socialImage}) {
+function SEO({ title, description, socialTitle, location}) {
   
-  const { site } = useStaticQuery(
+  const { site, image } = useStaticQuery(
     graphql`
       query {
         site {
@@ -14,15 +14,24 @@ function SEO({ title, description, socialTitle, socialImage}) {
             author
           }
         }
+        image: file(relativePath: {eq: "aith_labs_og.jpg"}) {
+          childImageSharp {
+            fixed(width: 1855, height: 895) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     `
   )
 
+  
   const lang = 'sv';
   const metaDescription = description || site.siteMetadata.description;
   const metaTitle = title || site.siteMetadata.title;
   const metaSocialTitle = socialTitle || metaTitle;
-
+  const ogImage = `${location.origin}${image.childImageSharp.fixed.src}`
+  
   let metaTags = [
     {
       name: `viewport`,
@@ -47,6 +56,10 @@ function SEO({ title, description, socialTitle, socialImage}) {
     {
       property: `og:type`,
       content: `website`,
+    },  
+    {
+      property: `og:image`,
+      content: ogImage,
     },
     {
       name: `twitter:card`,
@@ -65,19 +78,6 @@ function SEO({ title, description, socialTitle, socialImage}) {
       content: metaDescription,
     },
   ];
-
-  if(socialImage !== null) {
-    metaTags = metaTags
-    .concat({
-      name: `og:image`,
-      content: socialImage
-    })
-      .concat({
-        name: `image`,
-        property: `og:image`,
-        content: socialImage
-      })
-  }
 
   return (
     <Helmet

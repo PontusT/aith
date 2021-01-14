@@ -139,9 +139,7 @@ const PdfCv = ({data, image}) => {
       width: '75%',
       paddingLeft: 20,
     }
-
   });
-
 
   return (
     <Document>

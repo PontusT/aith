@@ -13,8 +13,8 @@ exports.cvData = {
         "Pontus has a master's degree in Computer Science and Engineering (Civilingenjör i Datateknik) from Linköping University and over 5 years in the business. He's a full on fullstack developer whom you will often find coding even in his free time.",
       image: "IMG_7162.jpg",
       seo: {
-        metaTitle: 'Pontus Thulin | Fullstack Developer & Software Engineer',
-        metaDescription: 'Pontus Thulin | Fullstack Developer & Software Engineer | ReactJS, NodeJS, GatsbyJS, Java, Kotlin and much more',
+        metaTitle: 'Aith Labs | Pontus Thulin | Fullstack Developer & Software Engineer',
+        metaDescription: 'Aith | Labs Pontus Thulin | Fullstack Developer & Software Engineer | ReactJS, NodeJS, GatsbyJS, Java, Kotlin and much more',
       },
       contact: {
         website: "https://aith.se",

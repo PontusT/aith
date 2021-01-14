@@ -1,8 +1,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Aith Labs`,
-    description: `Aith Labs`,
+    title: `Aith Labs - IT-konsulter inriktade på Webbutveckling. Frontend och Backend.`,
+    description: `Aith Labs - Konsulter inriktade mot webbutveckling. Frontend, Backend, Java, Kotlin, JavaScript, NodeJS, AWS, HTML/CSS, ReactJS, GatsbyJS, JAMStack.`,
     author: `Aith Labs`,
     siteUrl: `https://aith.se`,
   },
@@ -38,10 +38,10 @@ module.exports = {
         name: `Aith Labs`,
         short_name: `Aith`,
         start_url: `/`,
-        background_color: `#FFFFFF`,
-        theme_color: `#D7E2D0`,
+        background_color: `#FFBBEC`,
+        theme_color: `#FFBBEC`,
         display: `minimal-ui`,
-        icon: `src/images/aith-logo.png`,
+        icon: `src/images/aith_labs_favicon.png`,
       },
     },
   ],
