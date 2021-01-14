@@ -262,7 +262,7 @@ exports.cvData = {
             dates: "2009/2014",
             title: "MSc Computer Science",
             text:
-              "Pontus has a master’s degree in Computer Science and Engineering (Civilingenjör i Datateknik) from Linköpings Univesity. The specialization was within Secure and Stable systems with a master thesis about automated security testing."
+              "Pontus has a master’s degree in Computer Science and Engineering (Civilingenjör i Datateknik) from Linköpings Univesity. The specialization was within Secure and Stable systems with a master thesis about automated security testing."
           },
           {
             location: "Linköping University",

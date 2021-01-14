@@ -17,7 +17,7 @@ const PdfCv = ({data, image}) => {
   // Create styles
   const styles = StyleSheet.create({
     page: {
-      backgroundColor: '#fdfdfd',
+      // backgroundColor: 'transparent',
       color: data.darkFontColor,
       paddingTop: 40,
       paddingBottom: 30,
