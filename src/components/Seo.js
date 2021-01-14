@@ -2,7 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ title, description, socialTitle, location}) {
+function SEO({ title, description, socialTitle}) {
   
   const { site, image } = useStaticQuery(
     graphql`
@@ -30,7 +30,7 @@ function SEO({ title, description, socialTitle, location}) {
   const metaDescription = description || site.siteMetadata.description;
   const metaTitle = title || site.siteMetadata.title;
   const metaSocialTitle = socialTitle || metaTitle;
-  const ogImage = `${location.origin}${image.childImageSharp.fixed.src}`
+  const ogImage = `https://aith.se${image.childImageSharp.fixed.src}`
   
   let metaTags = [
     {

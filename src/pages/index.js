@@ -4,7 +4,7 @@ import SEO from '../components/Seo'
 import {motion} from 'framer-motion'
 import { useTheme } from '@emotion/react'
 
-const Index = ({location}) => {
+const Index = () => {
   
   const theme = useTheme();
 
@@ -62,9 +62,7 @@ const Index = ({location}) => {
 
   return (
     <>
-      <SEO
-        location={location}
-      />
+      <SEO />
       <StyledHero>
         <AITH>
           AITH
