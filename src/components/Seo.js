@@ -62,6 +62,11 @@ function SEO({ title, description, socialTitle, location}) {
       content: ogImage,
     },
     {
+      name: `image`,
+      property: `og:image`,
+      content: ogImage
+    },
+    {
       name: `twitter:card`,
       content: `summary`,
     },
