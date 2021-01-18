@@ -10,7 +10,7 @@ exports.cvData = {
       name: "Pontus Thulin",
       workTitle: "Software Engineer & Fullstack Developer",
       presentation:
-        "Pontus has a master's degree in Computer Science and Engineering (Civilingenjör i Datateknik) from Linköping University and over 5 years in the business. He's a full on fullstack developer whom you will often find coding even in his free time.",
+        "Pontus has a master's degree in Computer Science and Engineering (Civilingenjör i Datateknik) from Linköping University and over 5 years in the business. He's fullstack developer whom you will often find coding even in his free time. His tech stack is currently most focused on Java, Kotlin, JavaScript, NodeJS and ReactJS but he's always open for new challenges and learning new techniques. With an education and career focused on computer security he will make sure to build secure, stable and well-tested systems.",
       image: "IMG_7162.jpg",
       seo: {
         metaTitle: 'Aith Labs | Pontus Thulin | Fullstack Developer & Software Engineer',
