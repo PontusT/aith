@@ -124,8 +124,6 @@ The PDF files are generated on the fly using `react-pdf`. This is because this l
 
 * Implement Dark Mode. The code has some preparations for this.
 
-* Fix laggy animations. This might be due to the react-pdf lib generating the PDF on page load. 
-
 * Create more CV designs
 
 * Extract the CV specific code to a react lib or gatsby plugin. 

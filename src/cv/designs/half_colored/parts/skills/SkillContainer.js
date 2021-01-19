@@ -32,7 +32,7 @@ const SkillContainer = ({ skills, color, bgColor }) => {
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: `${skill.level}%` }}
-              transition={{ duration: 1, delay: 2 }}
+              transition={{ duration: 1, delay: 1.1 }}
               css={css`
                 height: 100%;
                 background-color: ${color};

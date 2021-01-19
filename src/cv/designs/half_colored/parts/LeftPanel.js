@@ -35,11 +35,9 @@ const LeftPanel = ({ data, image }) => {
   return (
     <StyledContainer>
       <StaggerChildrenWrapper>
-        <StaggerChild>
-          <FlexCenter>
-            <FluidProfilePicture image={image} alt={data.name} />
-          </FlexCenter>
-        </StaggerChild>
+        <FlexCenter>
+          <FluidProfilePicture image={image} alt={data.name} />
+        </FlexCenter>
 
         <StaggerChild>
           <LeftPanelSection>
