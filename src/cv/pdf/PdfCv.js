@@ -1,23 +1,22 @@
 import React from 'react';
 import { Image, Font, Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
-import robotoRegular from './fonts/roboto/Roboto-Regular.ttf'
-import robotoThin from './fonts/roboto/Roboto-Thin.ttf'
-import robotoBold from './fonts/roboto/Roboto-Bold.ttf'
+import robotoRegular from './fonts/roboto/Roboto-Regular.ttf';
+import robotoThin from './fonts/roboto/Roboto-Thin.ttf';
+import robotoBold from './fonts/roboto/Roboto-Bold.ttf';
 
-const PdfCv = ({data, image}) => {
-
+const PdfCv = ({ data, image }) => {
   Font.register({
-    family: 'Roboto', fonts: [
-      { src: robotoRegular }, 
+    family: 'Roboto',
+    fonts: [
+      { src: robotoRegular },
       { src: robotoThin, fontWeight: 300 },
       { src: robotoBold, fontWeight: 700 },
-    ]
+    ],
   });
 
   // Create styles
   const styles = StyleSheet.create({
     page: {
-      // backgroundColor: 'transparent',
       color: data.darkFontColor,
       paddingTop: 40,
       paddingBottom: 30,
@@ -39,13 +38,13 @@ const PdfCv = ({data, image}) => {
       fontFamily: 'Roboto',
       fontSize: 22,
       textTransform: 'uppercase',
-      fontWeight: 700
+      fontWeight: 700,
     },
     h3: {
       fontFamily: 'Roboto',
       fontSize: 14,
       textTransform: 'uppercase',
-      fontWeight: 700
+      fontWeight: 700,
     },
     h4: {
       fontFamily: 'Roboto',
@@ -56,12 +55,12 @@ const PdfCv = ({data, image}) => {
     h5: {
       fontFamily: 'Roboto',
       fontSize: 14,
-      fontWeight: 300
+      fontWeight: 300,
     },
     h6: {
       fontFamily: 'Roboto',
       fontSize: 10,
-      fontWeight: 300
+      fontWeight: 300,
     },
     topSection: {
       flexDirection: 'row',
@@ -138,15 +137,17 @@ const PdfCv = ({data, image}) => {
     textWrapper: {
       width: '75%',
       paddingLeft: 20,
-    }
+    },
   });
 
   return (
     <Document>
       <Page size="A4" style={styles.page}>
-        <Text style={styles.p} render={({ pageNumber, totalPages }) => (
-          `${pageNumber} / ${totalPages}`
-        )} fixed />
+        <Text
+          style={styles.p}
+          render={({ pageNumber, totalPages }) => `${pageNumber} / ${totalPages}`}
+          fixed
+        />
         <View style={styles.topSection}>
           <Image style={styles.image} src={image.fluid.src} />
           <View style={styles.nameSection}>
@@ -160,205 +161,156 @@ const PdfCv = ({data, image}) => {
 
         <View style={styles.outerContactSection}>
           <View style={styles.contactSection}>
-            <Text style={styles.h5}>
-              {data.contact.email}
-            </Text>
-            <Text style={styles.h5}>
-              {data.contact.tel.display}
-            </Text>
-            <Text style={styles.h5}>
-              {data.contact.website}
-            </Text>
-
+            <Text style={styles.h5}>{data.contact.email}</Text>
+            <Text style={styles.h5}>{data.contact.tel.display}</Text>
+            <Text style={styles.h5}>{data.contact.website}</Text>
           </View>
         </View>
 
         <View style={styles.headingRow}>
-          <Text style={styles.h2}>
-            Top Languages
-              </Text>
-          <View style={styles.line}></View>
-        </View>
-        <View style={styles.langageSection}>
-          <View style={styles.innerLangageSection}>
-            {data.skills.map((skill, index) => {
-              return (
-                <View 
-                  key={skill.skill}
-                  style={{
-                    width: '50%',
-                    paddingBottom: 6,
-                    paddingLeft: index % 2 === 0 ? 0 : 10,
-                    paddingRight: index % 2 !== 0 ? 0 : 10
-                  }}>
-                  <Text style={styles.h6}>
-                    {skill.skill}
-                  </Text>
-                  <View style={styles.outerSkill}>
-                    <View style={{ height: '100%', width: `${skill.level}%`, backgroundColor: data.accentColor }}>
-                    </View>
-                  </View>
-                </View>
-              )
-            }
-            )}
-          </View>
-        </View>
-
-        <View style={styles.headingRow}>
-          <Text style={styles.h2}>
-            Top Frameworks
-            </Text>
+          <Text style={styles.h2}>Top Languages</Text>
           <View style={styles.line} />
         </View>
         <View style={styles.langageSection}>
           <View style={styles.innerLangageSection}>
-            {data.frameworks.map((skill, index) => {
-              return (
-                <View
-                  key={skill.skill}
-                  style={{ 
-                    width: '50%',
-                    paddingBottom: 6,
-                    paddingLeft: index % 2 === 0 ? 0 : 10,
-                    paddingRight: index % 2 !== 0 ? 0 : 10
-                  }}>
-                  <Text style={styles.h6}>
-                    {skill.skill}
-                  </Text>
-                  <View style={styles.outerSkill}>
-                    <View style={{ height: '100%', width: `${skill.level}%`, backgroundColor: data.accentColor }}>
-                    </View>
-                  </View>
+            {data.skills.map((skill, index) => (
+              <View
+                key={skill.skill}
+                style={{
+                  width: '50%',
+                  paddingBottom: 6,
+                  paddingLeft: index % 2 === 0 ? 0 : 10,
+                  paddingRight: index % 2 !== 0 ? 0 : 10,
+                }}
+              >
+                <Text style={styles.h6}>{skill.skill}</Text>
+                <View style={styles.outerSkill}>
+                  <View
+                    style={{
+                      height: '100%',
+                      width: `${skill.level}%`,
+                      backgroundColor: data.accentColor,
+                    }}
+                  />
                 </View>
-              )
-            }
-            )}
+              </View>
+            ))}
           </View>
         </View>
 
         <View style={styles.headingRow}>
-          <Text style={styles.h2}>
-            Tech list
-              </Text>
+          <Text style={styles.h2}>Top Frameworks</Text>
           <View style={styles.line} />
         </View>
-        <Text style={styles.p}>
-          {data.knowledgeList.join(", ")}
-        </Text>
-
-        <View break style={styles.headingRow}>
-          <Text style={styles.h2}>
-            Work Experience
-            </Text>
-          <View style={styles.line}></View>
-        </View>
-        {data.work_experience.list.map(experience => {
-          return (
-            <View 
-              key={experience.title + experience.location + experience.dates}
-              style={styles.listSection}>
-              <View style={styles.listItem}>
-                <View style={styles.titleAndDateWrapper}>
-                  <Text style={styles.h3}>
-                    {experience.title.split(' ').join('\n')}
-                  </Text>
-                  <Text style={styles.h5}>
-                    {experience.dates}
-                  </Text>
-                </View>
-                <View style={styles.textWrapper}>
-                  <Text style={styles.h4}>
-                    {experience.location}
-                  </Text>
-                  <View style={{ marginBottom: 3 }} />
-                  <Text style={styles.p}>
-                    {experience.text}
-                  </Text>
+        <View style={styles.langageSection}>
+          <View style={styles.innerLangageSection}>
+            {data.frameworks.map((skill, index) => (
+              <View
+                key={skill.skill}
+                style={{
+                  width: '50%',
+                  paddingBottom: 6,
+                  paddingLeft: index % 2 === 0 ? 0 : 10,
+                  paddingRight: index % 2 !== 0 ? 0 : 10,
+                }}
+              >
+                <Text style={styles.h6}>{skill.skill}</Text>
+                <View style={styles.outerSkill}>
+                  <View
+                    style={{
+                      height: '100%',
+                      width: `${skill.level}%`,
+                      backgroundColor: data.accentColor,
+                    }}
+                  />
                 </View>
               </View>
-            </View>
-          )
-        })}
+            ))}
+          </View>
+        </View>
+
+        <View style={styles.headingRow}>
+          <Text style={styles.h2}>Tech list</Text>
+          <View style={styles.line} />
+        </View>
+        <Text style={styles.p}>{data.knowledgeList.join(', ')}</Text>
 
         <View break style={styles.headingRow}>
-          <Text style={styles.h2}>
-            Projects
-            </Text>
-          <View style={styles.line}></View>
+          <Text style={styles.h2}>Work Experience</Text>
+          <View style={styles.line} />
         </View>
-        {data.projects.list.map(experience => {
-          return (
-            <View
-              key={experience.title + experience.location + experience.dates}
-              style={styles.listSection}>
-              <View style={styles.listItem}>
-                <View style={styles.titleAndDateWrapper}>
-                  <Text style={styles.h3}>
-                    {experience.title.split(' ').join('\n')}
-                  </Text>
-                  <Text style={styles.h5}>
-                    {experience.dates}
-                  </Text>
-                </View>
-                <View style={styles.textWrapper}>
-                  <Text style={styles.h4}>
-                    {experience.location}
-                  </Text>
-                  <View style={{ marginBottom: 3 }} />
-                  <Text style={styles.p}>
-                    {experience.text}
-                  </Text>
-                </View>
+        {data.work_experience.list.map((experience) => (
+          <View
+            key={experience.title + experience.location + experience.dates}
+            style={styles.listSection}
+          >
+            <View style={styles.listItem}>
+              <View style={styles.titleAndDateWrapper}>
+                <Text style={styles.h3}>{experience.title.split(' ').join('\n')}</Text>
+                <Text style={styles.h5}>{experience.dates}</Text>
+              </View>
+              <View style={styles.textWrapper}>
+                <Text style={styles.h4}>{experience.location}</Text>
+                <View style={{ marginBottom: 3 }} />
+                <Text style={styles.p}>{experience.text}</Text>
               </View>
             </View>
-          )
-        })}
+          </View>
+        ))}
 
         <View break style={styles.headingRow}>
-          <Text style={styles.h2}>
-            Education(s)
-            </Text>
-          <View style={styles.line}></View>
+          <Text style={styles.h2}>Projects</Text>
+          <View style={styles.line} />
         </View>
-        {data.education.list.map(experience => {
-          return (
-            <View 
-              key={experience.title + experience.location + experience.dates}
-              style={styles.listSection}>
-              <View style={styles.listItem}>
-                <View style={styles.titleAndDateWrapper}>
-                  <Text style={styles.h3}>
-                    {experience.title.split(' ').join('\n')}
-                  </Text>
-                  <Text style={styles.h5}>
-                    {experience.dates}
-                  </Text>
-                </View>
-                <View style={styles.textWrapper}>
-                  <Text style={styles.h4}>
-                    {experience.location}
-                  </Text>
-                  <View style={{ marginBottom: 3 }} />
-                  <Text style={styles.p}>
-                    {experience.text}
-                  </Text>
-                </View>
+        {data.projects.list.map((experience) => (
+          <View
+            key={experience.title + experience.location + experience.dates}
+            style={styles.listSection}
+          >
+            <View style={styles.listItem}>
+              <View style={styles.titleAndDateWrapper}>
+                <Text style={styles.h3}>{experience.title.split(' ').join('\n')}</Text>
+                <Text style={styles.h5}>{experience.dates}</Text>
+              </View>
+              <View style={styles.textWrapper}>
+                <Text style={styles.h4}>{experience.location}</Text>
+                <View style={{ marginBottom: 3 }} />
+                <Text style={styles.p}>{experience.text}</Text>
               </View>
             </View>
-          )
-        })}
+          </View>
+        ))}
+
+        <View break style={styles.headingRow}>
+          <Text style={styles.h2}>Education(s)</Text>
+          <View style={styles.line} />
+        </View>
+        {data.education.list.map((experience) => (
+          <View
+            key={experience.title + experience.location + experience.dates}
+            style={styles.listSection}
+          >
+            <View style={styles.listItem}>
+              <View style={styles.titleAndDateWrapper}>
+                <Text style={styles.h3}>{experience.title.split(' ').join('\n')}</Text>
+                <Text style={styles.h5}>{experience.dates}</Text>
+              </View>
+              <View style={styles.textWrapper}>
+                <Text style={styles.h4}>{experience.location}</Text>
+                <View style={{ marginBottom: 3 }} />
+                <Text style={styles.p}>{experience.text}</Text>
+              </View>
+            </View>
+          </View>
+        ))}
 
         <Text style={styles.p}>
           Note: This PDF was generated on the fly using the React-pdf lib.
-          </Text>
-        <Text style={styles.p}>
-          Please notify me if you find any bugs.
         </Text>
-
+        <Text style={styles.p}>Please notify me if you find any bugs.</Text>
       </Page>
     </Document>
   );
-}
+};
 
 export default PdfCv;

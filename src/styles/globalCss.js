@@ -1,8 +1,7 @@
-import { css } from "@emotion/react";
+import { css } from '@emotion/react';
 
-export function useGlobalCss() {
-
-  //Define global css rules
+export default function useGlobalCss() {
+  // Define global css rules
   const globalCss = css`
     body {
       font-family: 'Noto Sans JP', 'Helvetica', sans-serif;
@@ -37,7 +36,7 @@ export function useGlobalCss() {
       line-height: 1.6;
       font-weight: 300;
     }
-  `
+  `;
 
   return globalCss;
 }

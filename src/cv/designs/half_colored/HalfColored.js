@@ -1,11 +1,10 @@
 import React from 'react';
-import styled from '@emotion/styled'
-import {useTheme} from '@emotion/react'
+import styled from '@emotion/styled';
+import { useTheme } from '@emotion/react';
 import LeftPanel from './parts/LeftPanel';
 import RightPanel from './parts/RightPanel';
 
-const HalfColored = ({data, image}) => {
-
+const HalfColored = ({ data, image }) => {
   const theme = useTheme();
 
   const GridContainer = styled.div`
@@ -22,14 +21,14 @@ const HalfColored = ({data, image}) => {
     }
     grid-template-rows: auto;
     gap: 0px 0px;
-  `
+  `;
 
   return (
     <GridContainer>
-      <LeftPanel data={data} image={image}/>
+      <LeftPanel data={data} image={image} />
       <RightPanel data={data} />
     </GridContainer>
   );
-}
+};
 
 export default HalfColored;

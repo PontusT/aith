@@ -1,4 +1,3 @@
-
 module.exports = {
   siteMetadata: {
     title: `Aith Labs - IT-konsulter inriktade på Webbutveckling. Frontend och Backend.`,
@@ -18,19 +17,19 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images/`,
-        ignore: [`**/\.*`], // ignore files starting with a dot
+        ignore: [`**/.*`], // ignore files starting with a dot
       },
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     `gatsby-plugin-preload-fonts`,
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /icons/ // See below to configure properly
-        }
-      }
+          include: /icons/, // See below to configure properly
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -45,4 +44,4 @@ module.exports = {
       },
     },
   ],
-}
+};

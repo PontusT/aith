@@ -1,6 +1,4 @@
-const mediaQuery = (breakpoint) => {
-  return `@media (min-width: ${breakpoint}px)`
-}
+const mediaQuery = (breakpoint) => `@media (min-width: ${breakpoint}px)`;
 
 const theme = {
   /**
@@ -12,6 +10,6 @@ const theme = {
     lg: mediaQuery(992),
     xl: mediaQuery(1200),
   },
-}
+};
 
 export default theme;

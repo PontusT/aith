@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from '@emotion/styled'
-import {useTheme} from '@emotion/react'
+import styled from '@emotion/styled';
+import { useTheme } from '@emotion/react';
 import FullWithText from './FullWidthText';
 import LeftPanelSection from './LeftPanelSection';
 import SkillContainer from './skills/SkillContainer';
@@ -9,8 +9,7 @@ import StaggerChildrenWrapper from '../../../animations/StaggerChildrenWrapper';
 import StaggerChild from '../../../animations/StaggerChild';
 import ContactList from './contact/ContactList';
 
-const LeftPanel = ({data, image}) => {
-
+const LeftPanel = ({ data, image }) => {
   const theme = useTheme();
 
   const StyledContainer = styled.div`
@@ -27,46 +26,37 @@ const LeftPanel = ({data, image}) => {
       padding: 40px 20%;
     }
     color: ${data.lightFontColor};
-  `
+  `;
 
   const FlexCenter = styled.div`
     display: flex;
     justify-content: center;
-  `
+  `;
 
   return (
     <StyledContainer>
-      
       <StaggerChildrenWrapper>
-
         <StaggerChild>
           <FlexCenter>
-            <FluidProfilePicture
-              image={image}
-              alt={data.name}
-            />
+            <FluidProfilePicture image={image} alt={data.name} />
           </FlexCenter>
         </StaggerChild>
 
         <StaggerChild>
           <LeftPanelSection>
-            <FullWithText>
-              {data.presentation}
-            </FullWithText>
+            <FullWithText>{data.presentation}</FullWithText>
           </LeftPanelSection>
         </StaggerChild>
 
         <StaggerChild>
-          <LeftPanelSection title={"Frameworks"}>
-            <SkillContainer skills={data.frameworks} color={data.accentColor} bgColor="white"/>
+          <LeftPanelSection title="Frameworks">
+            <SkillContainer skills={data.frameworks} color={data.accentColor} bgColor="white" />
           </LeftPanelSection>
         </StaggerChild>
 
         <StaggerChild>
-          <LeftPanelSection title={"Tech List"}>
-            <FullWithText>
-              {data.knowledgeList.join(", ")}
-            </FullWithText>
+          <LeftPanelSection title="Tech List">
+            <FullWithText>{data.knowledgeList.join(', ')}</FullWithText>
           </LeftPanelSection>
         </StaggerChild>
 
@@ -77,10 +67,9 @@ const LeftPanel = ({data, image}) => {
             </FlexCenter>
           </LeftPanelSection>
         </StaggerChild>
-
       </StaggerChildrenWrapper>
     </StyledContainer>
   );
-}
+};
 
 export default LeftPanel;

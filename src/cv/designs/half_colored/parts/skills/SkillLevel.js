@@ -1,11 +1,8 @@
 import React from 'react';
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
-const SkillLevel = ({title, level}) => {
-
-  const StyledContainer = styled.div`
-
-  `
+const SkillLevel = ({ title, level }) => {
+  const StyledContainer = styled.div``;
 
   return (
     <StyledContainer>
@@ -13,6 +10,6 @@ const SkillLevel = ({title, level}) => {
       {level}
     </StyledContainer>
   );
-}
+};
 
 export default SkillLevel;

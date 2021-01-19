@@ -1,9 +1,8 @@
-import React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
-function SEO({ title, description, socialTitle}) {
-  
+function SEO({ title, description, socialTitle }) {
   const { site, image } = useStaticQuery(
     graphql`
       query {
@@ -14,7 +13,7 @@ function SEO({ title, description, socialTitle}) {
             author
           }
         }
-        image: file(relativePath: {eq: "aith_labs_og.jpg"}) {
+        image: file(relativePath: { eq: "aith_labs_og.jpg" }) {
           childImageSharp {
             fixed(width: 1855, height: 895) {
               ...GatsbyImageSharpFixed
@@ -22,24 +21,23 @@ function SEO({ title, description, socialTitle}) {
           }
         }
       }
-    `
-  )
+    `,
+  );
 
-  
   const lang = 'sv';
   const metaDescription = description || site.siteMetadata.description;
   const metaTitle = title || site.siteMetadata.title;
   const metaSocialTitle = socialTitle || metaTitle;
-  const ogImage = `https://aith.se${image.childImageSharp.fixed.src}`
-  
-  let metaTags = [
+  const ogImage = `https://aith.se${image.childImageSharp.fixed.src}`;
+
+  const metaTags = [
     {
       name: `viewport`,
-      content: 'width=device-width, initial-scale=1'
-    },  
+      content: 'width=device-width, initial-scale=1',
+    },
     {
       name: `author`,
-      content: site.siteMetadata.author
+      content: site.siteMetadata.author,
     },
     {
       name: `description`,
@@ -56,7 +54,7 @@ function SEO({ title, description, socialTitle}) {
     {
       property: `og:type`,
       content: `website`,
-    },  
+    },
     {
       property: `og:image`,
       content: ogImage,
@@ -64,7 +62,7 @@ function SEO({ title, description, socialTitle}) {
     {
       name: `image`,
       property: `og:image`,
-      content: ogImage
+      content: ogImage,
     },
     {
       name: `twitter:card`,
@@ -93,7 +91,7 @@ function SEO({ title, description, socialTitle}) {
       titleTemplate={metaTitle}
       meta={metaTags}
     />
-  )
+  );
 }
 
-export default SEO
+export default SEO;
