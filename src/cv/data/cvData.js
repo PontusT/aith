@@ -168,8 +168,8 @@ exports.cvData = {
             text:
               "https://aith.se is a responsive JAMStack website built in GatsbyJS (with Framer Motion for animations) and deployed with AWS Amplify. The site was created with a mobile-first approach. One of the features is the CV creator that takes a descriptive json file and constructs a personal CV which scales well on different devices. Like this one. Each CV is statically created at build time due to the JAMStack approach to maximize performance and SEO. The site is under continuous development, next up is to store all CV data in AWS Appsync and secure it with AWS Cognito.",
             link: {
-              text: "Source Code (soon)",
-              url: "https://www.youtube.com/watch?v=oHg5SJYRHA0"
+              text: "Source Code",
+              url: "https://github.com/PontusT/aith"
             }
           },
           {
