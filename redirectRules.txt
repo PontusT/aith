@@ -1,2 +1,0 @@
-sourece     target          Type
-/<*>        /404.html       404 (rewrite)
