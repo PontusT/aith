@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import HalfColored from '../cv/designs/half_colored/HalfColored';
 import CvContainer from '../cv/container/CvContainer';
 import SEO from '../components/Seo';
+import Delayed from '../hooks/Delayed';
 
 const PdfDownloadButton = React.lazy(() => import('../cv/pdf/PdfDownloadButton'));
 
@@ -36,9 +37,11 @@ const CurriculumVitae = ({ pageContext, data }) => {
         <CvContainer>
           {cvComponent}
           {!isSSR && (
-            <React.Suspense fallback={<div />}>
-              <PdfDownloadButton data={cvData} image={image} />
-            </React.Suspense>
+            <Delayed waitBeforeShow={3000}>
+              <React.Suspense fallback={<div />}>
+                <PdfDownloadButton data={cvData} image={image} />
+              </React.Suspense>
+            </Delayed>
           )}
         </CvContainer>
       </StyledContainer>

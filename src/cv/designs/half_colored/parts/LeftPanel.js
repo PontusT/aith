@@ -14,7 +14,6 @@ const LeftPanel = ({ data, image }) => {
 
   const StyledContainer = styled.div`
     background-color: ${data.color};
-    /* overflow: hidden; */
     padding: 40px 8%;
     ${theme.breakpoints.sm} {
       padding: 40px 20%;
