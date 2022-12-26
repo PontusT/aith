@@ -10,12 +10,12 @@ exports.cvData = {
       name: 'Pontus Thulin',
       workTitle: 'Software Engineer & Fullstack Developer',
       presentation:
-        "Pontus has a master's degree in Computer Science and Engineering (Civilingenjör i Datateknik) from Linköping University and over 6 years in the business. He's fullstack developer whom you will often find coding even in his free time. His tech stack is currently most focused on Java, Kotlin, JavaScript, NodeJS and ReactJS but he's always open for new challenges and learning new techniques. With an education and career focused on computer security he will make sure to build secure, stable and well-tested systems.",
+        "Pontus has a master's degree in Computer Science and Engineering (Civilingenjör i Datateknik) from Linköping University and over 8 years of work experience in the business. He's fullstack developer whom you will often find coding even on his spare time. His tech stack is currently most focused on Java, Kotlin, JavaScript, NodeJS and ReactJS but he's always open for new challenges and learning new techniques. With an education and career focused on computer security he will make sure to build secure, stable and most of all well-tested systems.",
       image: 'IMG_7162.jpg',
       seo: {
         metaTitle: 'Aith Labs | Pontus Thulin | Fullstack Developer & Software Engineer',
         metaDescription:
-          'Aith | Labs Pontus Thulin | Fullstack Developer & Software Engineer | ReactJS, NodeJS, GatsbyJS, Java, Kotlin and much more',
+          'Aith | Labs Pontus Thulin | Fullstack Developer & Software Engineer | Java, Kotlin, JavaScript and much more',
       },
       contact: {
         website: 'https://aith.se',
@@ -28,24 +28,24 @@ exports.cvData = {
       },
       frameworks: [
         {
-          skill: 'ReactJS',
+          skill: 'Spring Boot',
           level: 90,
         },
         {
-          skill: 'GatsbyJS',
-          level: 90,
+          skill: 'Reactor Core',
+          level: 80,
+        },
+        {
+          skill: 'ReactJS',
+          level: 70,
         },
         {
           skill: 'NodeJS',
-          level: 75,
-        },
-        {
-          skill: 'Spring Boot',
-          level: 75,
+          level: 70,
         },
         {
           skill: 'AWS',
-          level: 65,
+          level: 60,
         },
         {
           skill: 'Google Cloud',
@@ -54,20 +54,20 @@ exports.cvData = {
       ],
       skills: [
         {
-          skill: 'JavaScript',
-          level: 90,
-        },
-        {
-          skill: 'HTML / CSS',
+          skill: 'Java',
           level: 90,
         },
         {
           skill: 'Kotlin',
           level: 90,
+        },    
+        {
+          skill: 'JavaScript',
+          level: 85,
         },
         {
-          skill: 'Java',
-          level: 90,
+          skill: 'HTML / CSS',
+          level: 70,
         },
         {
           skill: 'Python',
@@ -87,23 +87,29 @@ exports.cvData = {
         },
       ],
       knowledgeList: [
+        'Spring Framework',
+        'Spring Boot',
+        'Reactor Core',
+        'Kafka',
+        'RxJava',
+        'Kubernetes',
+        'Grafana',
+        'Kibana',
+        'MongoDB',
+        'Mongoose',
+        'ReactJS',
         'JAMStack',
         'GatsbyJS',
-        'ReactJS',
         'Framer Motion',
         'AWS Route 56',
         'AWS Cognito',
         'AWS Amplify',
         'AWS Appsync',
         'PWA',
-        'Micro Services',
-        'Spring Framework',
-        'Spring Boot',
+        'Micro Services',      
         'NextJS',
         'Prismic CMS',
         'GraphQL',
-        'Grafana',
-        'Kibana',
         'Solr',
         'Apollo',
         'NodeJS',
@@ -121,7 +127,6 @@ exports.cvData = {
         'Machine Learning',
         'Tensorflow',
         'Docker',
-        'RxJava',
         'RabbitMQ',
         'Hystrix',
         'Zuul',
@@ -136,8 +141,6 @@ exports.cvData = {
         'Maven',
         'Git',
         'Subversion',
-        'MongoDB',
-        'Mongoose',
         'MySQL',
         'Oracle',
         'Intellij',
@@ -200,6 +203,13 @@ exports.cvData = {
         title: 'work experience',
         icon: 'work',
         list: [
+          {
+            location: 'Tele2 / Comviq',
+            dates: '2021/Current',
+            title: 'backend developer',
+            text:
+              'The assignment was focused on designing and building a new system for handling incoming orders. A challenging task with sharp requirements for the system to be able to handle high loads at peaks and also being resilient to failures. The techstack was a mixture of Java, Kotlin, Reactor Core, Kafka and MongoDB.',
+          },
           {
             location: 'Dagsverket Webbyrå',
             dates: '2020/2021',

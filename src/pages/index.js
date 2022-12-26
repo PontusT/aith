@@ -67,7 +67,7 @@ const Index = () => {
         <Info>
           Aith Labs är it-konsulter inriktade mot webbutveckling med många års erfarenheter från
           backend- och frontendprogrammering bakom sig. Vår tech stack är starkast inom Java,
-          Kotlin, JavaScript, NodeJS, ReactJS och GatsbyJS. Vi kommer från en grund i datasäkerhet
+          Kotlin, JavaScript, NodeJS och ReactJS. Vi kommer från en grund i datasäkerhet
           och har alltid ett starkt fokus på att bygga säkra och stabila system som håller länge.
         </Info>
         <motion.div
